@@ -53,10 +53,7 @@ const App = () => {
     }
   };
 
-const handleDeletes  = (id)=>{
-  console.log("click")
-  dispatch(deleteData(id))
-}
+
 
 
   return (
@@ -73,6 +70,7 @@ const handleDeletes  = (id)=>{
             <td>Id</td>
             <td>Name</td>
             <td>email</td>
+            <td>rating</td>
             <td>Status</td>
 
           </tr>
@@ -123,6 +121,8 @@ const handleDeletes  = (id)=>{
                 )}
               </td>
               <td>{item.email}</td>
+              <td>{item.rating}</td>
+
               <td style={{ display: 'flex', alignItems: 'center' }}>
                 <FontAwesomeIcon icon={faTrash} color='red' onClick={() => handleDelete(item._id)} />
                 {editStates[item._id] ? (
@@ -135,6 +135,7 @@ const handleDeletes  = (id)=>{
                 )}
 
               </td>
+
             </tr>
           ))}
         </tbody>
